@@ -17,10 +17,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('phone');
-            $table->string('cin');
-            $table->enum('status', ['Working', 'Studying', 'Internship', 'Unemployed','Freelancing']);
-            $table->foreignId('formation_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->rememberToken();
             $table->timestamps();
         });
